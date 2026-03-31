@@ -113,7 +113,7 @@ npm run lint:firefox
 
 <br/>
 
-**[jeanroa.dev](https://jeanroa.dev)** · **[buy me a coffee](https://buymeacoffee.com/jeanroa)** · **[github](https://github.com/drakvyn/feed-fleaner-for-linkedIn)**
+**[jeanroa.dev](https://jeanroa.dev)** · **[support the projects](https://buymeacoffee.com/jeanroa)** · **[github](https://github.com/drakvyn/feed-fleaner-for-linkedIn)**
 
 <br/>
 
