@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>LinkedIn Feed Cleaner</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header class="header">
+        <h1>Feed cleaner</h1>
+        <p class="subtitle">Hide AI-related posts on LinkedIn</p>
+      </header>
+      <p id="popup-error" class="error" role="alert" hidden></p>
+      <div class="row-toggle">
+        <label for="enabled" class="label-text">
+          Filter enabled
+          <span class="hint-inline">Applies to open LinkedIn tabs</span>
+        </label>
+        <div class="switch" title="Toggle filter">
+          <input type="checkbox" id="enabled" />
+          <label for="enabled" class="track"><span class="thumb"></span></label>
+        </div>
+      </div>
+      <div class="section">
+        <label class="field-label" for="keywords">Extra keywords</label>
+        <textarea
+          id="keywords"
+          placeholder="One phrase per line&#10;e.g. copilot&#10;AutoGPT"
+          spellcheck="false"
+          autocomplete="off"
+        ></textarea>
+        <p class="hint">
+          Combined with the built-in list (ChatGPT, LLM, “artificial
+          intelligence”, etc.). Scroll the feed or reload the page if a tab
+          looks stale.
+        </p>
+      </div>
+    </div>
+    <footer class="credit">
+      Created by
+      <a
+        href="https://jeanroa.dev"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Jean Roa</a
+      >
+      <span class="credit-sep" aria-hidden="true">·</span>
+      <a
+        href="https://buymeacoffee.com/jeanroa"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Buy me a coffee</a
+      >
+      <span class="credit-sep" aria-hidden="true">·</span>
+      <a
+        href="https://github.com/drakvyn/feed-fleaner-for-linkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub</a
+      >
+    </footer>
+    <script src="popup.js"></script>
+  </body>
+</html>
