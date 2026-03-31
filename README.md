@@ -34,6 +34,86 @@ State → `storage.local`. Popup → `tabs.sendMessage` to LinkedIn tabs so **Ge
 
 ---
 
+## ▸ built-in keyword list
+
+Matching is case-insensitive; Unicode “fancy” Latin (e.g. mathematical italics) is folded to ASCII before checks.  
+Custom lines from the popup are **substring** matches (one phrase per line), except a line that is exactly `ai` or `ia`, which uses **whole-word** matching like the built-ins below.
+
+### Whole words only
+
+These do **not** match inside longer words (e.g. not `email`, `inicia`):
+
+| Source | Tokens |
+|:---|:---|
+| `PHRASES` | `ai`, `ia` |
+| `SHORT_PATTERNS` (regex `\b…\b`) | `ml`, `llm`, `llms`, `rag`, `agi` |
+
+### Substring phrases (`PHRASES`)
+
+If the post text contains any of these (after normalization), the card is hidden:
+
+```
+artificial intelligence
+inteligencia artificial
+machine learning
+aprendizaje automático
+deep learning
+large language model
+language model
+generative ai
+generative artificial
+gen ai
+genai
+chatgpt
+chat gpt
+gpt-4
+gpt-3
+gpt 4
+gpt 3
+gpt4
+gpt3
+openai
+anthropic
+claude
+midjourney
+dall-e
+dall·e
+stable diffusion
+prompt engineering
+ingeniería de prompts
+copilot
+github copilot
+google gemini
+gemini pro
+google bard
+neural network
+neural networks
+redes neuronales
+fine-tuning
+finetuning
+fine tuning
+retrieval augmented
+rag pipeline
+multimodal model
+diffusion model
+transformer model
+whisper
+embedding model
+vector database
+langchain
+haystack
+hugging face
+mistral ai
+cohere
+perplexity ai
+whatsapp
+whatsapp business
+```
+
+Canonical list lives in **`content.js`** (`PHRASES` + `SHORT_PATTERNS`).
+
+---
+
 ## ▸ stack 〜 file map
 
 | layer | files |
@@ -98,7 +178,7 @@ npm run lint:firefox
 
 ## ▸ versions & releases
 
-- **SemVer** — `package.json`, `manifest.json`, and `manifest-firefox-v2.json` share the same `version` (e.g. `1.0.1`). Check with `npm run verify:version`.
+- **SemVer** — `package.json`, `manifest.json`, and `manifest-firefox-v2.json` share the same `version` (e.g. `1.1.0`). Check with `npm run verify:version`.
 - **[CHANGELOG.md](CHANGELOG.md)** — human-readable history.
 - **[RELEASING.md](RELEASING.md)** — bump, tag (`v1.0.1`), GitHub Release, stores.
 - Pushing a tag **`v*.*.*`** runs **GitHub Actions**: lint, build, attach `web-ext-artifacts/*.zip` to the release.

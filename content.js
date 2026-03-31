@@ -36,7 +36,6 @@
     "openai",
     "anthropic",
     "claude",
-    "claude ",
     "midjourney",
     "dall-e",
     "dall·e",
