@@ -140,6 +140,12 @@
     clearTimeout(keywordsEl._t);
     keywordsEl._t = setTimeout(save, 400);
   });
+  // Flush pending debounce if the popup closes before 400ms (keywords would never save).
+  keywordsEl.addEventListener("blur", () => {
+    clearTimeout(keywordsEl._t);
+    keywordsEl._t = null;
+    save();
+  });
 
   load();
 })();

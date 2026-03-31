@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "LinkedIn: hide AI posts",
-  "version": "1.0.0",
-  "description": "Hide AI-related posts in your LinkedIn feed (ChatGPT, LLMs, and more).",
+  "version": "1.1.0",
+  "description": "Hide AI/LLM posts in your LinkedIn feed—built-in keywords, custom lines, toggle in the popup. Chrome & Firefox. Local storage only.",
   "icons": {
     "128": "icon.png"
   },
@@ -29,13 +29,17 @@
       ],
       "js": ["content.js"],
       "css": ["content.css"],
-      "run_at": "document_idle"
+      "run_at": "document_end"
     }
   ],
   "browser_specific_settings": {
     "gecko": {
       "id": "linkedin-hide-ai@example.com",
-      "strict_min_version": "57.0"
+      "strict_min_version": "57.0",
+      "data_collection_permissions": {
+        "required": ["none"],
+        "optional": []
+      }
     }
   }
 }
