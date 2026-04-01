@@ -29,7 +29,7 @@
 
 ## ▸ what it does
 
-Browser extension (**Chromium MV3** + **Firefox** / Zen) — **Feed cleaner for LinkedIn** — that **covers** matching feed cards on `linkedin.com` with a **blur overlay** (not `display: none`). The overlay shows *“This post contains blocked content”* and a **See post** button; clicking it removes the blur for that card (remembered for the session via a stable post fingerprint).
+Browser extension (**Chromium MV3** + **Firefox** / Zen) — **Feed cleaner for LinkedIn** — that **covers** matching feed cards on `linkedin.com` with a **blur overlay**. The overlay shows *“This post contains blocked content”* and a **See post** button; clicking it removes the blur for that card (remembered for the session via a stable post fingerprint).
 
 - **Matching:** built-in AI/ML-related keyword list + **extra keywords** (one phrase per line in the popup). Case-insensitive; Unicode “fancy” Latin is folded before checks (see below).
 - **Author whitelist:** optional list of names or profile slugs (`/in/…`). If a post matches blocked keywords but the **author** matches a whitelist line, the card **stays visible**.
@@ -165,11 +165,7 @@ LICENSE · CONTRIBUTING.md
 
 <div align="center">
 
-### 〜 cyber mini-demo 〜
-
-*(decorative — record your own popup + feed captures as `assets/demo-popup.gif` etc.)*
-
-<img src="assets/y2k-terminal.gif" width="420" alt="terminal aesthetic demo" />
+<img src="assets/y2k-terminal.gif" width="420" alt="drakvyn/feed-fleaner-for-linkedIn — decorative terminal aesthetic" />
 
 </div>
 
@@ -218,8 +214,6 @@ npm run lint:firefox
 ```
 ·:*¨༺ ♱ ✧ ✦ ✧ ♱ ༻¨*:·
 ```
-
-<sub>〜 made for humans who miss chronological feeds 〜</sub>
 
 <br/>
 
